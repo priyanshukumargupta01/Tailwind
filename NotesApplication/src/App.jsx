@@ -3,12 +3,15 @@ import React, { useState } from "react";
 const App = () => {
 
   const [title, settitle] = useState("")
+  const [details, setDetails] = useState("")
+  const [task, setTask] = useState([])
 
 
   const sumbitHandler = (e) => {
     e.preventDefault();
-    console.log(title);
+    console.log(title,details);
     settitle("")
+    setDetails("")
   };
   return (
     <div className="h-screen bg-black text-white">
@@ -31,6 +34,12 @@ const App = () => {
             type="text"
             placeholder="Write Details"
             className="px-5 w-full py-2 h-40 border-4 rounded m-2.5"
+            value={details}
+            onChange={(e)=>{
+              console.log(
+                setDetails(e.target.value)
+              )
+            }}
           />
           <button
             onClick={function (e) {
