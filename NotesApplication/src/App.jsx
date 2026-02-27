@@ -7,8 +7,8 @@ const App = () => {
   };
   return (
     <div className="h-screen bg-black text-white">
-      <form className="flex items-start justify-between p-10 gap-4">
-        <div className="flex flex-col w-1/2 ">
+      <form className="lg:flex items-start justify-between p-10 gap-4">
+        <div className="flex flex-col lg:w-1/2 ">
         <h1 className="text-2xl font-semibold">Enter Notes</h1>
         
           <input
@@ -30,13 +30,14 @@ const App = () => {
             Add Notes
           </button>
         </div>
-        <div className="mx-30">
+        <div className="lg:mx-30  mx-10">
           <h1 className="text-2xl font-semibold">Recent Notes</h1>
-          <div className="flex gap-4" >
-          <div className="h-42 w-32 m-5  rounded-2xl bg-white "> </div>
-          <div className="h-42 w-32  m-5 rounded-2xl bg-white "> </div>
-          <div className="h-42 w-32  m-5 rounded-2xl bg-white "> </div>
-          <div className="h-42 w-32  m-5 rounded-2xl bg-white "> </div>
+          <div className=" flex gap-4 overflow-x-auto
+ " >
+          <div className="h-42 w-35 m-5 min-w-32  rounded-2xl bg-white "> </div>
+          <div className="h-42 w-32  m-5 rounded-2xl min-w-32 bg-white "> </div>
+          <div className="h-42 w-32  m-5 rounded-2xl min-w-32 bg-white "> </div>
+          <div className="h-42 w-32  m-5 rounded-2xl min-w-32 bg-white "> </div>
         </div></div>
       </form>
     </div>
